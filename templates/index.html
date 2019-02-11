@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+<center>
+<h2>Monkey Classifier</h2>
+
+<img src="{{url_for('static', filename='n1025.jpg')}}" alt="domalan maymun" height="128" width="128">
+<img src="{{url_for('static', filename='n5020.jpg')}}" alt="ünlü maymun" height="128" width="128">
+<img src="{{url_for('static', filename='n6030.jpg')}}" alt="erzurumlu maymun" height="128" width="128">
+<article class="explanation">
+  <h2>What is Monkey Classifier?</h2>
+  <p>Monkey Classifier is a ResNet50 trained with bunch of images of monkeys.</p>
+  <p>There are 10 classes of different monkey species it can predict with almost 100% accuracy.</p>
+  <h2>Why Should I use it?</h2>
+  <p>Because no matter what kind of image you upload, the neural network would still try to produce a prediction.</p>
+  <p>That means that you can actually find which monkey species your friend resemble, and that is kinda fun, so...</p>
+</article>
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+</center>
+{% endblock %}

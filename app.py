@@ -35,7 +35,7 @@ result_dictionary = {0: 'Mantled Howler (Alouatta Palliata)',
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'models/monkeys.h5'
+MODEL_PATH = 'monkeys.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)

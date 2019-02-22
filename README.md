@@ -1,7 +1,7 @@
 # monkeys-to-deploy
 
 You can use predict.py to make a prediction or run on localhost by doing
-```bash
+```shell
 python app.py
 ```
 on your local directory. You can also just fork and deploy to heroku.
